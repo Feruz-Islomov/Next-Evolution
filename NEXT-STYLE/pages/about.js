@@ -1,0 +1,11 @@
+import styles from "../styles/About.module.scss";
+function about() {
+  return (
+    <>
+      <h2 className={styles.highlightscss}>About page</h2>
+      <button className="btn btn-success">Primary</button>
+    </>
+  );
+}
+
+export default about;
