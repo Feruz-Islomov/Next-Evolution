@@ -17,14 +17,14 @@ function Blog({ title, description }) {
 
 export default Blog;
 
-export async function getStaticPaths() {
-  return {
-    paths: [{ params: { blogId: "1" } }],
-    fallback: true,
-  };
-}
+// export async function getStaticPaths() {
+//   return {
+//     paths: [{ params: { blogId: "1" } }],
+//     fallback: true,
+//   };
+// }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const user = process.env.DB_USER;
   const password = process.env.DB_PASSWORD;
   console.log(
